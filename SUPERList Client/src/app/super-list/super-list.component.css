@@ -1,0 +1,27 @@
+.super-list-title {
+    font-size: 52px;
+}
+.underline {
+    text-decoration: underline;
+    font-size: 23px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.choosed {
+    text-decoration: line-through;
+}
+
+.mr-1 {
+    margin-right: 5px;
+}
+
+.text-danger {
+    font-size: 28px;
+}

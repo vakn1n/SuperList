@@ -1,0 +1,45 @@
+<div class="notepad-background justify-content- text-center mt-2">
+    <div class="row super-list-title heebo">
+        <div class="col-xl-12">
+            רשימת הקניות שלי:
+        </div>
+    </div>
+    <!-- <div class="col-xl-5 anka align-left">
+            {{product.productName}}
+        </div>
+        <div class="col-xl-5 anka align-right">
+            {{product.productAmount}}
+        </div> -->
+    <div class="row" *ngIf="!isSuperListEmpty()">
+        <table class="table align-middle">
+            <thead>
+                <tr>
+                    <th scope="col">שם המוצר</th>
+                    <th scope="col">כמות </th>
+                    <th scope="col">פעולות </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of getSuperList()">
+                    <th scope="row" [ngClass]="{'choosed': product.isTook}">{{ product.productName }}</th>
+                    <td [ngClass]="{'choosed': product.isTook}" >{{ product.productAmount }}</td>
+                    <td>
+                        <button type="button" class="heebo btn btn-danger" *ngIf="!product.isTook" (click)= "product.isTook = true">לקחתי</button>
+                        <button type="button" class="heebo btn btn-danger" *ngIf="product.isTook" (click)= "product.isTook = false">בטל סימון</button>
+                        <button type="button" class="heebo btn btn-secondary mr-1" (click)="removeProduct(product)">מחק מהרשימה</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row text-danger heebo" *ngIf="isSuperListEmpty()">
+        <div class="col-xl-12">
+            רשימת הקניות ריקה
+        </div>
+    </div> 
+    <div class="row mt-5">
+        <div class="col-xl-12 heebo">
+            <button class="btn btn-default active" [routerLink]="''">בחזרה לעמוד הבית</button>
+        </div>
+    </div>
+</div>

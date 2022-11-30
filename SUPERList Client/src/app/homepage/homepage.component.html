@@ -1,0 +1,57 @@
+<div class="notepad-background justify-content-center text-center mt-2">
+    <div class="row pt-5">
+        <div class="col-xl-12 welcome-title">
+            SUPER
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 welcome-title">
+            LIST
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 pt-5">
+            <button class="btn btn-lg active heebo" data-bs-toggle="modal" data-bs-target="#addProductModal">אני רוצה להוסיף
+                לרשימה
+            </button>
+        </div>
+        <div class="col-xl-12 pt-5">
+            <button class="btn btn-lg active heebo" [routerLink]="['/super-list']">לרשימה שלי</button>
+        </div>
+    <!-- </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        המוצר נוסף לרשימה בהצלחה
+       </div> -->
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header heebo">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class=" text-center" id="addProductModalLabel">הוספת מוצר לרשימה</h5>
+            </div>
+            <form [formGroup]="productDataForm" class="modal-body">
+                <div class="row mt-1">
+                    <div class="col-xl-6">שם המוצר: </div>
+                    <div class="col-xl-6">
+                        <input type="text" class="form-control text-center" formControlName="productNameForm">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-xl-6">כמות: </div>
+                    <div class="col-xl-6">
+                        <input type="number" class="form-control text-center" (keydown.enter)="addProductToList() "  formControlName="productAmountForm">
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer anka">
+                <button type="button" (click)="addProductToList()" class="heebo btn active " data-bs-dismiss="modal">הוספה
+                    לרשימה</button>
+                <button type="button" class="heebo btn btn-danger" data-bs-dismiss="modal">סגירה</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+
+@font-face {
+    font-family: Anton;
+    src: url(assets/fonts/Anton-Regular.ttf);
+}
+
+@font-face {
+    font-family: Heebo;
+    src: url(assets/fonts/Heebo-Regular.ttf);
+}
+
+/* You can add global styles to this file, and also import other style files */
+body {
+    direction: rtl;
+}
+
+.notepad-background {
+    height: 700px;
+    overflow-x: hidden;
+}
+
+.anton {
+    font-family: Anton;
+}
+
+.heebo {
+    font-family: Heebo;
+}

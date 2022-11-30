@@ -1,0 +1,31 @@
+
+.welcome-title {
+    font-size: 90px;
+    font-weight: bold;  
+    font-family: Anton;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal-background {
+    background-color: wheat;
+}
+
+.heebo {
+    font-family: Heebo;
+}
+
+.modal-header {
+    display: unset !important;
+}
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
